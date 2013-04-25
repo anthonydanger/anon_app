@@ -38,6 +38,19 @@ describe "Static pages" do
   	it "should have the Title 'About Us'" do
   		visit '/static_pages/about'
   		page.should have_selector('title', :text => 'Anon App | About Us')
-  	end  
+  	end
+
+    describe "Contact Us" do
+
+    it "should have the h1 'Contact Us'" do
+      visit '/static_pages/contact'
+      page.should have_selector('h1', :text => 'Contact Us')
+    end
+
+    it "should have the Title 'Contact Us'" do
+      visit '/static_pages/contact'
+      page.should have_selector('title', :text => 'Anon App | Contact Us')
+    end  
   end
+end
 end
