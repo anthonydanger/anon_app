@@ -2527,3 +2527,1590 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 38ms (Views: 23.0ms | ActiveRecord: 1.0ms)
   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
   [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:34 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (64.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (43.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 241ms (Views: 216.0ms | ActiveRecord: 20.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (53.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 31 May 2013 18:58:34 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$Ts5uoslgiXG.iOU8DLrRyucp4U4MzhoXAhtIb1HaV.KPGzztvWMlG"], ["remember_token", "xwNvAwxxj_JU_Y5YHjAiEQ"], ["updated_at", Fri, 31 May 2013 18:58:34 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:34 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:34 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:34 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$EhdkCxDV4NjF5sJVpJKDeus2i55abKoOHC6TB033FYnFxW1IuvCfi"], ["remember_token", "UdaYLUGK9Cq2wHZit8HYOg"], ["updated_at", Fri, 31 May 2013 18:58:34 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:34 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$ZrySZb3wzqmr1tDuj8scg.hQxqs5//yb7KBcemk0Je97pNoPQNnA6"], ["remember_token", "UV9m9sAzjujm-ylHSszH4w"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$tSdPeQce.JBlWHW5hrdFl.T.FmlmFqTBzJ3uIesYZlMhsQvTfYM.O"], ["remember_token", "qgm_h_PzR1osOVD_XGyv1g"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$3adJ5iJ/salVx8cNE1.VourJocS7zivHyQLaSsLpzz5cV1GyRnEhi"], ["remember_token", "hVM0J3sry6Ivw3eOOuihmw"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$J3zRLRwX0XX.sx6idr6CZ.3pmhbiqOWqzse/NNsBcs7oam/DpRC9W"], ["remember_token", "tS0RxrORv2_Nan356oJ0ug"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started PUT "/users/1" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Michael Hartl", "email"=>"michael@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('michael@example.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$r9Wu/GYnSn32XkRtzk9bM.8CIhS6E7Ge6QV6aJdvCtrXo/YW47CSy"], ["remember_token", "-XMDYGdmtZZ9EiEwF6TS5A"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$yrxs8N0Rk.lDmu/4qELXi.aUhoVWm8ApqT66Iy12ImDm7x9IsoUfG"], ["remember_token", "cCBf2bTyM8Pq942mz95yvA"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$huj2qZK.xNoH81SaVJufLOnsqRiNgC1p66CO49QLu8iSK3OIsyC3C"], ["remember_token", "QS34AjZZ2Wwe_1iH3K5a_w"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+Started POST "/users" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$u.holzpPr8TpKhXZNXUX.OTF30cjDPngJ2eFkkezQQFG2HtSLfnWu"], ["remember_token", "92-X5R3h7hrG-Xb34zuoPg"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 18:58:35 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$DQA2AYl1zVzGM.vA6VaWPe/SfrRWLtVuo5lVPzjQNIAKQgzi6lyh6"], ["remember_token", "MaGSOKQvpIg4r4HgURJq0Q"], ["updated_at", Fri, 31 May 2013 18:58:35 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1" for 127.0.0.1 at 2013-05-31 11:58:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (63.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 238ms (Views: 219.0ms | ActiveRecord: 19.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (10.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 31 May 2013 19:08:25 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$FFX8TuicanJ6NHigW4y36umeSDTOh8lgQe3.Pt9ooXQiPb86PWGTi"], ["remember_token", "RJzmPRDP2ABwX7wTu_TZcQ"], ["updated_at", Fri, 31 May 2013 19:08:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-05-31 12:08:25 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michael@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Fri, 31 May 2013 19:08:25 UTC +00:00], ["email", "michael@example.com"], ["name", "Michael Hartl"], ["password_digest", "$2a$04$D8cHkj8uzkUV0DYct4CYFuzNHNRy9CYhybCs2V09sqyfsg6cmBWPy"], ["remember_token", "TDhnRvvZABmElTQm2x5QMw"], ["updated_at", Fri, 31 May 2013 19:08:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/users/1" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('michael@example.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2013-05-31 12:08:26 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:34:57 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (533.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (64.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 1013ms (Views: 951.1ms | ActiveRecord: 48.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_1@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (31.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:34:59 UTC +00:00], ["email", "person_1@example.com"], ["name", "Person 1"], ["password_digest", "$2a$04$UpbhZwK/gWxMlpf4tukfJ..6jDku./G789qxx5Mi3fPe.iwKWsXJy"], ["remember_token", "BvB0kdPZ42voE2Y7A_bvcA"], ["updated_at", Tue, 04 Jun 2013 06:34:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:34:59 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_1@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 13ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'BvB0kdPZ42voE2Y7A_bvcA' LIMIT 1
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'BvB0kdPZ42voE2Y7A_bvcA' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_2@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00], ["email", "person_2@example.com"], ["name", "Person 2"], ["password_digest", "$2a$04$pGb4dI0qIss8pgJ0T.NQ5e5xC6urVEU2fXzJ6aGsMVt61mq8O9v16"], ["remember_token", "-XC4XD9TqpL7gAnr0lgI7A"], ["updated_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_2@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '-XC4XD9TqpL7gAnr0lgI7A' LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '-XC4XD9TqpL7gAnr0lgI7A' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_3@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00], ["email", "person_3@example.com"], ["name", "Person 3"], ["password_digest", "$2a$04$5aeYyOLBUPTcFUgJwuyKweVZ8E.QjmYpfs15Ig7DPMvRhL1aMOvDu"], ["remember_token", "UFYLO0r-2qoajl4fsG8Kkw"], ["updated_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_3@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_3@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'UFYLO0r-2qoajl4fsG8Kkw' LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'UFYLO0r-2qoajl4fsG8Kkw' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_4@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00], ["email", "person_4@example.com"], ["name", "Person 4"], ["password_digest", "$2a$04$/2NTgc0Qv4u5thLa/dazluB2dvuiLf5y.Lt17REBFO2QbGcccmUE2"], ["remember_token", "LTPcrlS3cWXrWcwYGD7h1w"], ["updated_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_4@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_4@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'LTPcrlS3cWXrWcwYGD7h1w' LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'LTPcrlS3cWXrWcwYGD7h1w' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_5@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00], ["email", "person_5@example.com"], ["name", "Person 5"], ["password_digest", "$2a$04$GSEh.y2nnh4oNayqno39SOp481t8YSYlxt71biY8Zo9mkYGD7D5Z."], ["remember_token", "-bQtarVbNBvpju_xYrMaUA"], ["updated_at", Tue, 04 Jun 2013 06:35:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_5@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_5@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '-bQtarVbNBvpju_xYrMaUA' LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '-bQtarVbNBvpju_xYrMaUA' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_6@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00], ["email", "person_6@example.com"], ["name", "Person 6"], ["password_digest", "$2a$04$wV8GofkejHDw3ZPjQDGEeu732ESahc9E2n8bqni4IOWWRewzkdKY."], ["remember_token", "lM6A_1R4mL1KM2FSMzeS4w"], ["updated_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_6@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_6@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'lM6A_1R4mL1KM2FSMzeS4w' LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'lM6A_1R4mL1KM2FSMzeS4w' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+Started PUT "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Person 6", "email"=>"person_6@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'lM6A_1R4mL1KM2FSMzeS4w' LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('person_6@example.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (6.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_7@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00], ["email", "person_7@example.com"], ["name", "Person 7"], ["password_digest", "$2a$04$AjDjOncHYxK7gUZZgrm5rOr4vXamfarFNa4OvYDbO7mbFW2f70Hhu"], ["remember_token", "pyfrlQG55YByIhHFZfWtIg"], ["updated_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_7@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_7@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'pyfrlQG55YByIhHFZfWtIg' LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'pyfrlQG55YByIhHFZfWtIg' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_8@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00], ["email", "person_8@example.com"], ["name", "Person 8"], ["password_digest", "$2a$04$gJfbA/fVYMzt2TLv0q.ryO6ele0nFdIFKP5b6N4V9MXwCKCH4uUGO"], ["remember_token", "7VXJOikKqtH2-J_o6J8Ghw"], ["updated_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_8@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_8@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '7VXJOikKqtH2-J_o6J8Ghw' LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '7VXJOikKqtH2-J_o6J8Ghw' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_9@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00], ["email", "person_9@example.com"], ["name", "Person 9"], ["password_digest", "$2a$04$QN/3VRb/kLkAMkUfaqzky.mkn11.BARywOlD7DqGNznNbzzOodazy"], ["remember_token", "tKnTbiCekk1fPrHLrTCWcA"], ["updated_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_9@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_9@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'tKnTbiCekk1fPrHLrTCWcA' LIMIT 1
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 1.0ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'tKnTbiCekk1fPrHLrTCWcA' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+Started POST "/users" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (11.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_10@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00], ["email", "person_10@example.com"], ["name", "Person 10"], ["password_digest", "$2a$04$VzumD2MLBvtRPtdljIG6iemTdrVvgBBS6ciuqdXacOsksLUyv509K"], ["remember_token", "yi1QSHa_9xQ88JwuK5I7ug"], ["updated_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_11@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00], ["email", "person_11@example.com"], ["name", "Person 11"], ["password_digest", "$2a$04$JlaVeEC4fyQrEyYYEVVxZeTrYHdGvLpPD4JztXyGSpmic4eDEfr.S"], ["remember_token", "WImrK6jN6naNzE2sA5E46w"], ["updated_at", Tue, 04 Jun 2013 06:35:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_12@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_12@example.com"], ["name", "Person 12"], ["password_digest", "$2a$04$2mNE95mgAGiwRegDEhSYh.n2d727H.AzEdEUNZd4wjVLdMets2nk2"], ["remember_token", "RsKmCAJr09z8broKGROh4g"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_12@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'person_12@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'RsKmCAJr09z8broKGROh4g' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+Started GET "/users" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'RsKmCAJr09z8broKGROh4g' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30 OFFSET 0
+  Rendered users/_user.html.erb (3.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_13@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_13@example.com"], ["name", "Person 13"], ["password_digest", "$2a$04$V7zAGd0oS6QZ6iMn0YyHueOide.cNYsQHatmxr/bOwGLKolRTcmPa"], ["remember_token", "6EX4ileDXhGNW2LJv3h84g"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_13@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_13@example.com' LIMIT 1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '6EX4ileDXhGNW2LJv3h84g' LIMIT 1
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 1.0ms)
+Started GET "/users" for 127.0.0.1 at 2013-06-03 23:35:02 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '6EX4ileDXhGNW2LJv3h84g' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/_user.html.erb (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_14@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_14@example.com"], ["name", "Person 14"], ["password_digest", "$2a$04$IIlLHEb0/H30yNhUixCEaulhPWu2bdyY8X/J9ZidAdj7HZeZDpwLm"], ["remember_token", "Lw2p2KxJSiMiTCHsdSei9w"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_15@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_15@example.com"], ["name", "Person 15"], ["password_digest", "$2a$04$inhYgEAw9EcdsFcZ/yAkUuYP9kmVVgYgENVyi6ctr2e55au3Gt4um"], ["remember_token", "OOd72yyFxmeWP5r5VNU8vw"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_16@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_16@example.com"], ["name", "Person 16"], ["password_digest", "$2a$04$XRTp0iRHba3DEX4dZgrxGOtrCMSnHMojJk9p1u.zdOHBL3XXZF24C"], ["remember_token", "-5LVMtdfoLVusMBKZoOqVg"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_17@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_17@example.com"], ["name", "Person 17"], ["password_digest", "$2a$04$ZnCgcGcdP3vyY2RigpBUneMPhr2LtckKFvib6gNg4yLpaozpdlGKC"], ["remember_token", "TNOo1YJLLUx9M7_y1bWcBg"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_18@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_18@example.com"], ["name", "Person 18"], ["password_digest", "$2a$04$j6A5Sz0rjjvJ1hcpNA9ZEutet3aiQexK5JyXjR5MKwMFaCnQBh4qC"], ["remember_token", "4wcMs4nt6S1r-sbZe6tk_g"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_19@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_19@example.com"], ["name", "Person 19"], ["password_digest", "$2a$04$x9T.qAzcAF/XkYtAFaa7MOHw8gIhHi3eqPEtxQDHliGX7bN.3CreO"], ["remember_token", "V5L8j-U9ZvlHNDLk6gGXSQ"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_20@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_20@example.com"], ["name", "Person 20"], ["password_digest", "$2a$04$0q8QcuVS.Q9vxdCZgNc8pu8Zi1iRS5WMGL7GGQ1fWlyisSf8c.Kwu"], ["remember_token", "fJSz1VEGRkiHqND5gmrXsg"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_21@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_21@example.com"], ["name", "Person 21"], ["password_digest", "$2a$04$GqjbSxcQD1SCkPXkdwhu3Ojd.bMuhrGsQbU15xs4Mcjj5XLAMELLq"], ["remember_token", "d39z7BST0v8rEt9q5lBZ8Q"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_22@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_22@example.com"], ["name", "Person 22"], ["password_digest", "$2a$04$tiAywKFBJat9E1W9KyvT1Od6P9n.5kULjS5I8JAh/6pm3Gm69Po3m"], ["remember_token", "yPne6ScmT0wPX0iUx1BIkA"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_23@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_23@example.com"], ["name", "Person 23"], ["password_digest", "$2a$04$CPb507wsbvzchvWfM.eAPOCIRzxkogMt6QcssC7unFjvnSvqkRbWG"], ["remember_token", "X5JTlsTxdUyqm-p40yHH2g"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_24@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_24@example.com"], ["name", "Person 24"], ["password_digest", "$2a$04$vQWB5lmFNG5WbbfhcTE4S.jZPUjJDZVqsGpDR5G3MFe1CpiIRx9o2"], ["remember_token", "W5UbEbIu0oQaCS2avaXjpg"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (23.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_25@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_25@example.com"], ["name", "Person 25"], ["password_digest", "$2a$04$WYE.97xj/dbyRUJb1iy9sOuSh8xBely5eRK8AxOMiISvJEJgGIR4C"], ["remember_token", "OHwce3yFHq1qL0xeqJgcCw"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_26@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_26@example.com"], ["name", "Person 26"], ["password_digest", "$2a$04$/U9/al1SDoBsUoRCdKM4Zu6ltDQg/HQjnXZYP8roOWXcSbwR5Uhae"], ["remember_token", "3IvQatJFtT_wn0dwHIwXhA"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (17.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_27@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_27@example.com"], ["name", "Person 27"], ["password_digest", "$2a$04$1XYAVrH3lmwKy.yUtwBGbO2kiM72E8ECqcNaaISFmLmwvqiXWNGR6"], ["remember_token", "CRZhdYF4qWcsrKzv2Zk2MQ"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_28@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_28@example.com"], ["name", "Person 28"], ["password_digest", "$2a$04$JL8DRvGnBqYVVKDHEpK1leNHSL2VGq8XVkFjs4VSdsk9UQV.zoOpC"], ["remember_token", "PClOsQ15qn4aANJsAcaBeQ"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_29@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_29@example.com"], ["name", "Person 29"], ["password_digest", "$2a$04$aOKYT9Tj2tzd9f6oH4yCwOyrZnHgQVt6NeazuObCE3jYLdh2babSW"], ["remember_token", "5bZE_1ESFJEyA_hf5o_dog"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_30@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_30@example.com"], ["name", "Person 30"], ["password_digest", "$2a$04$kgtk0QQCokdHlKSuNHvuDe23xv5nEke6BSR2RunGi2QdTYCFukpty"], ["remember_token", "gC1PCAit2gaPBHo1hsue_g"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_31@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_31@example.com"], ["name", "Person 31"], ["password_digest", "$2a$04$ZyhaMzPmw8DkcyeFkt4na.MmpN2M4jgIfYjQ3WXabve4c6/4iL3qe"], ["remember_token", "mGNw3MEZYu3uxkIopG2n2g"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_32@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_32@example.com"], ["name", "Person 32"], ["password_digest", "$2a$04$y4lA8eZ8nc4K/zeQewbQ8uXkfkbCDsrLB2VcIu4pllQqxgINGj3Vm"], ["remember_token", "9_BrZ7XgLT6OfdXlts_GaQ"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_33@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_33@example.com"], ["name", "Person 33"], ["password_digest", "$2a$04$sR8SxxJoPuIedr4QP9h9yeqUZ3wsQDjI9CHQiLH8BVghO59tqoaQq"], ["remember_token", "pu129HlBemP_cV1uwROaZg"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_34@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_34@example.com"], ["name", "Person 34"], ["password_digest", "$2a$04$TtSERimbVr5nsf0pTRZVtO3nvkXS4/7ko6szgFsrfA61d9YzV2.QS"], ["remember_token", "qkic7BgmAxrhr8PmHLnmLQ"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_35@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_35@example.com"], ["name", "Person 35"], ["password_digest", "$2a$04$PNXKhTihD01g/c7gvWneJe53gTyJnhSdL2Um.TKJqcHAyutj6Omee"], ["remember_token", "FFaQr-oICxkFk3q7i1KdCw"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_36@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_36@example.com"], ["name", "Person 36"], ["password_digest", "$2a$04$Z1AYvQ4YwLz2pWb34IDAc..etij3wIOXpAOebHBgPkv2rHKUWpKp6"], ["remember_token", "YeZh25BXgQGfx6ee_hXtuw"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (25.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_37@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_37@example.com"], ["name", "Person 37"], ["password_digest", "$2a$04$oJ589hsx9TAuwPCOc45XGeGgpndhTI81G8nB2bXdoaW71SMMzTcDa"], ["remember_token", "cBn9y60zjtJUD9Nw-3naEg"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_38@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_38@example.com"], ["name", "Person 38"], ["password_digest", "$2a$04$5FBGDU20z2uWj9m.q8fjiuh7RzFKKwwk0uhwYAaR5250Ex3UzbTQS"], ["remember_token", "tTpRKKfZaviVmy3ZmjtJuw"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_39@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_39@example.com"], ["name", "Person 39"], ["password_digest", "$2a$04$v3qgmu4TYjU.mQ.xJKePu.O6e/jxfrczNCwY0bKUnipSaV31tvAju"], ["remember_token", "zgGlQGI6gwZH_vsx24yyyA"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_40@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_40@example.com"], ["name", "Person 40"], ["password_digest", "$2a$04$tKmpVV2gmiqlRcfBjS.OCOtQdlhfxAO.KcNG89fIX9Ppa2nQ2/0sa"], ["remember_token", "n7Aewbv5ZU-JoJymqJoKEQ"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_41@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_41@example.com"], ["name", "Person 41"], ["password_digest", "$2a$04$xRqOpyv7e.3Gjb3oJZbGxuPtO1tDX5pEg6SrSYA4MpUHJIK2ff5kS"], ["remember_token", "7MX61ThmsNsgfteMaNVuag"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_42@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00], ["email", "person_42@example.com"], ["name", "Person 42"], ["password_digest", "$2a$04$VQzZnxWehAh1vmVWofBv9u1EEJ9aDXQtakzh6wcTHsUgxi40OfYwi"], ["remember_token", "h3bLWCMf8ldckVvR9Ygcow"], ["updated_at", Tue, 04 Jun 2013 06:35:02 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_43@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:03 UTC +00:00], ["email", "person_43@example.com"], ["name", "Person 43"], ["password_digest", "$2a$04$BtYZtKEro6B9CrUKTSX9F.ehBBBmrj4auoyKfVxtlpdypIaHyIh3i"], ["remember_token", "QoeQ9ga8p9RWGmZPkb0tBw"], ["updated_at", Tue, 04 Jun 2013 06:35:03 UTC +00:00]]
+  [1m[35m (29.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_44@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:35:03 UTC +00:00], ["email", "person_44@example.com"], ["name", "Person 44"], ["password_digest", "$2a$04$klfg9tX1uLmWt7KGkmS.keb.w6n.aB8HcnMhj3ZIW9vTpzWDfvG1q"], ["remember_token", "msAi4ONHvnQQWWEFzc7-7w"], ["updated_at", Tue, 04 Jun 2013 06:35:03 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_44@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'person_44@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/31
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+Started GET "/users/31" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "31"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msAi4ONHvnQQWWEFzc7-7w' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (42.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+Started GET "/users" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msAi4ONHvnQQWWEFzc7-7w' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30 OFFSET 0
+  Rendered users/_user.html.erb (26.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('person_45@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:35:03 UTC +00:00], ["email", "person_45@example.com"], ["name", "Person 45"], ["password_digest", "$2a$04$1war3/WShS9YOnQS2RGVW.Tw0OAQ9PZQK0PUuCyOOAvEO1zA4WnDu"], ["remember_token", "MIM2daI6FqP-ppGpxyIB0w"], ["updated_at", Tue, 04 Jun 2013 06:35:03 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"person_45@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'person_45@example.com' LIMIT 1
+Redirected to http://www.example.com/users/31
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+Started GET "/users/31" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "31"]]
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'MIM2daI6FqP-ppGpxyIB0w' LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+Started GET "/users" for 127.0.0.1 at 2013-06-03 23:35:03 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'MIM2daI6FqP-ppGpxyIB0w' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/_user.html.erb (23.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mSQL (10.0ms)[0m  [1mDELETE FROM "users"[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@foo.COM') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('A_US-ER@f.b.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('frst.lst@foo.jp') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('a+b@baz.cn') LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(' ') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (31.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$eFrNWk0fqWrqGAEhEp05hu3HH8wQglN830ocvZdWHaVYyTnTZJgjq"], ["remember_token", "3ZHjpJ0u7oCLqrC8rxGqSA"], ["updated_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$U.9L8j4tdc8xf1l/WUYvZ.mD2F1n.IFD6LGVAae/gigVGRf5mEAhu"], ["remember_token", "8F4Mfntbq4_mY4RbOqHYug"], ["updated_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$3O4SEq1aDegldzyXUNbybuQyfhqqobEl9Rn9Tk3S13G4TGK5T0AOu"], ["remember_token", "A7NwASSM-xBqGLODnL-94A"], ["updated_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$UKjAYdD37lN71oeVpCgV/unJtCGeh4H5pX5R6z.xF6UyvxaJ56U06"], ["remember_token", "EtjR6BM4GgTxfSSnof7FAQ"], ["updated_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$QvGo0UNcM7497JoV0h05wOsmr0A.MhjDr0b9sUWY93auACDqubZz."], ["remember_token", "stkZCAkM3UlO2Y-dZ-koSQ"], ["updated_at", Tue, 04 Jun 2013 06:40:00 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@foo,com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example.user@foo.') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (11.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["admin", false], ["created_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$MFSA7btR1Sd1xyHQUSv7VOIpQsMgdUvahxz2V4g5J3d7Iye0as.JG"], ["remember_token", "rJLrL5w09mq1T4iXlpPNAg"], ["updated_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["created_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$b8QHJEP8Lbzi4YE6f7dtCuLayeMCVLtRb1oecU4JMYJpGMtnS8dRe"], ["remember_token", "YKKpWEaZcUa9L3pBVvG9wQ"], ["updated_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["admin", false], ["created_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$//rzOvqxAC9CETxL/v95WurS/vgT7iLYwcvDphf7IrDabYkbwZqqy"], ["remember_token", "BhwRo-Fl0tpXlwQueg9r1Q"], ["updated_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["admin", false], ["created_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$19pgqtljHHs55CMx0rZmkOR51laODsfImC7QHVdAOWNuGQrCkVM8i"], ["remember_token", "LD_wtYrtpf0uTS7DGJbg6A"], ["updated_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@foo.COM') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('A_US-ER@f.b.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('frst.lst@foo.jp') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('a+b@baz.cn') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(' ') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@foo,com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example.user@foo.') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["created_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$iM5baiBTYdhjCh97Qkx1gOjSdslzUdPvb47jmueYb.b7jAzikO57S"], ["remember_token", "KBTeIDX0NHsKCL2ZuVVtjQ"], ["updated_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  UPDATE "users" SET "admin" = 't', "remember_token" = 'alQ-Sz8rbAeiz3E-2VhMvA', "updated_at" = '2013-06-04 06:49:42.473293' WHERE "users"."id" = 1
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["created_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00], ["email", "user@example.com"], ["name", "Example User"], ["password_digest", "$2a$04$2JDWr3ZTbKhQ2BBN21ASze5VSKtlQEblEuRXFXiziu.K2c5MDOb.m"], ["remember_token", "KZc67BvBO4BuU-DLHbQIAQ"], ["updated_at", Tue, 04 Jun 2013 06:49:42 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
