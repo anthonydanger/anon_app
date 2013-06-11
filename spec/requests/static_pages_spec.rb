@@ -4,6 +4,8 @@ describe "Static pages" do
 
   let(:base_title) { "Anon App" }
 
+  subject { page }
+
   describe "Home page" do
     before { visit root_path }
 
@@ -17,6 +19,22 @@ describe "Static pages" do
 
     it "should not have a custom page title" do 
       page.should_not have_selector('title', :text => '| Home')
+    end
+
+    describe "for signed-in users" do
+      let(:user) { FactoryGirl.create(:user) }
+      before do
+        FactoryGirl.create(:micropost, user: user, content: "Lorem Ipsum")
+        FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")
+        sign_in user
+        visit root_path
+      end
+
+      it "should render the user's feed" do
+        user.feed.each do |item|
+          page.should have_selector("li##{item.id}", text: item.content)
+        end
+      end
     end
   end
 
@@ -33,7 +51,7 @@ describe "Static pages" do
   	end  
   end
 
-    describe "About page" do
+  describe "About page" do
 
   	it "should have the h1 'About Us'" do
   		visit about_path
@@ -47,15 +65,15 @@ describe "Static pages" do
 
     describe "Contact Us" do
 
-    it "should have the h1 'Contact Us'" do
-      visit contact_path
-      page.should have_selector('h1', :text => 'Contact Us')
-    end
+      it "should have the h1 'Contact Us'" do
+        visit contact_path
+        page.should have_selector('h1', :text => 'Contact Us')
+      end
 
-    it "should have the Title 'Contact Us'" do
-      visit contact_path
-      page.should have_selector('title', :text => "#{base_title} | Contact Us")
-    end  
+      it "should have the Title 'Contact Us'" do
+        visit contact_path
+        page.should have_selector('title', :text => "#{base_title} | Contact Us")
+      end  
+    end
   end
-end
 end
